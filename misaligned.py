@@ -10,7 +10,7 @@ def print_color_map():
 
 
 def value_calculation(i,j):
-    val = (5*i) + j
+    val = (5*i) + i
     return val
     
 def append_colour(value,major,minor):
