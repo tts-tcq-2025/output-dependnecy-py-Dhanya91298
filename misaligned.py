@@ -1,11 +1,12 @@
 
-def print_color_map():
+def print_color_map(printFtn):
     major_colors = ["White", "Red", "Black", "Yellow", "Violet"]
     minor_colors = ["Blue", "Orange", "Green", "Brown", "Slate"]
     for i, major in enumerate(major_colors):
         for j, minor in enumerate(minor_colors):
             value = value_calculation(i,j)
-            append_colour(value,major,minor)
+           colorCodeManualItem= append_colour(value,major,minor)
+           printFtn(colorCodeManualItem);
     return len(major_colors) * len(minor_colors)
 
 
@@ -15,11 +16,16 @@ def value_calculation(i,j):
     
 def append_colour(value,major,minor):
     mes = str(value) + '|' + major + '|' + minor
-    print(mes + '\n')
     return mes
-    
+def printColorCodeManualItem(item)
+    print(item);
 
-result = print_color_map()
+
+generatedManual=[]
+def fakePrintFtn(colorCodeManualItem)
+   
+
+result = print_color_map(fakePrintFtn)
 assert(result == 25)
 
 ##value_calculation() checks
